@@ -1,4 +1,4 @@
-package BuilderPattern;
+package pizzastore;
 
 public class Pizza {
 
@@ -6,6 +6,13 @@ public class Pizza {
     private String crust;
     private String type;
     private String size;
+
+    public Pizza() {
+        toppings = "Cheese";
+        crust = "normal";
+        type = "normal";
+        size = "small";
+    }
 
     public Pizza(String toppings, String crust, String type, String size) {
         this.toppings = toppings;
@@ -44,5 +51,15 @@ public class Pizza {
 
     public void setSize(String size) {
         this.size = size;
+    }
+
+    @Override
+    public String toString() {
+        return "Pizza { \n" +
+                "\ntoppings='" + toppings + '\'' +
+                ",\ncrust='" + crust + '\'' +
+                ",\ntype='" + type + '\'' +
+                ",\nsize='" + size + '\'' +
+                "}\n===========";
     }
 }
